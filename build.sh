@@ -12,7 +12,6 @@ lb config -d testing \
     --security false \
     --updates false \
     --backports false \
-    --packages-lists "minimal" \
     --firmware-binary \
     --firmware-chroot
 sudo lb build
