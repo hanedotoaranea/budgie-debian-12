@@ -5,6 +5,7 @@ firmware-atheros
 firmware-amd-graphics
 xorg
 sudo
+nautilus
 qterminal
 xserver-xorg-input-libinput
 budgie-desktop
