@@ -79,7 +79,6 @@ btrfs-progs
 xfsprogs
 jfsutils
 f2fs-tools
-minix-tools
 mtd-utils
 squashfs-tools
 cryptsetup
