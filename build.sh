@@ -1,18 +1,25 @@
-    lb config -d trixie \
-          --debian-installer live \
-          --iso-volume "Alice" \
+lb config -d trixie \
           --architectures amd64 \
           --binary-images iso \
-          --debian-installer-distribution trixie \
-          --debian-installer-gui true \
+          --iso-volume "Alice_$(date +%Y%m%d)" \  
           --archive-areas "main contrib non-free" \
-          --debootstrap-options "--variant=standard" \
-          --iso-publisher "hanedotoaranea"
+          --debootstrap-options "--variant=standard --include=sudo,locales,keyboard-configuration" \
+          --iso-publisher "hanedotoaranea - https://github.com/hanedotoaranea" \
+          --iso-application "GitHub:https://github.com/hanedotoaranea/budgie-debian-13" \
           --checksums sha256 \
           --mirror-bootstrap http://deb.debian.org/debian \
           --mirror-chroot http://deb.debian.org/debian \
           --mirror-chroot-security http://security.debian.org/debian-security \
           --mirror-binary http://deb.debian.org/debian \
-          --mirror-binary-security http://security.debian.org/debian-security
+          --mirror-binary-security http://security.debian.org/debian-security \
+          --win32-loader false \
+          --apt-recommends true \
+          --security true \
+          --zsync true \
+          --updates true \           
+          --firmware-binary true \     
+          --firmware-chroot true \     
+          --bootloader-timeout 5 \   
+          --hdd-label "ALICE_OS"       
     
 sudo lb build
