@@ -20,6 +20,8 @@ lb config -d trixie \
           --firmware-binary true \     
           --firmware-chroot true \     
           --bootloader-timeout 5 \   
-          --hdd-label "ALICE_OS"       
+          --hdd-label "ALICE_OS" \
+          --system normal \ 
+          --cache false
     
 sudo lb build
