@@ -4,7 +4,7 @@
           --architectures amd64 \
           --binary-images iso \
           --iso-volume "Alice_$(date +%Y%m%d)" \  
-           --archive-areas "main contrib non-free non-free-firmware" \
+          --archive-areas "main contrib non-free non-free-firmware" \
           --debootstrap-options "--variant=standard --include=sudo,locales,keyboard-configuration" \
           --iso-publisher "hanedotoaranea - https://github.com/hanedotoaranea" \
           --iso-application "GitHub:https://github.com/hanedotoaranea/budgie-debian-13" \
